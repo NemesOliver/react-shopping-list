@@ -14,7 +14,11 @@ function App() {
   const addToStatehandler = (e) => {
     e.preventDefault();
     // push inputs in the array **
-    setItems();
+    if (items.length === 0) {
+      setItems([input]);
+    } else {
+      setItems([...items, input]);
+    }
   };
   return (
     <div className="shopping-container">
