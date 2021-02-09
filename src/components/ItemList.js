@@ -3,10 +3,10 @@
 //imports
 import Item from "./Item";
 
-const ItemList = () => {
+const ItemList = ({ input }) => {
   return (
     <div className="item-list">
-      <Item />
+      <Item input={input}/>
     </div>
   );
 };

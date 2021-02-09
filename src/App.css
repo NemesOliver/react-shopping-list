@@ -80,15 +80,18 @@
   font-weight: 700;
 }
 
-.shopping-container .item-list .item a {
+.shopping-container .item-list .item button {
   text-decoration: none;
   font-weight: 600;
   color: white;
   background: #ff1c1c;
-  padding: 0 0.6rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .shopping-container .item-list .item a:hover {

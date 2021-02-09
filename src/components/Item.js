@@ -1,10 +1,10 @@
 // each item
 
-const Item = () => {
+const Item = ({input}) => {
   return (
-    <div class="item">
-      <p>item</p>
-      <a href="#">X</a>
+    <div className="item">
+      <p>{input}</p>
+      <button href="#">X</button>
     </div>
   );
 };

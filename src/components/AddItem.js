@@ -1,10 +1,15 @@
 //add item component
 
-const AddItem = () => {
+const AddItem = ({ addToStatehandler, setInput }) => {
   return (
-    <form>
-      <input class="userInput" type="text" placeholder="   Add item..." />
-      <button type="submit">add +</button>
+    <form onSubmit={addToStatehandler}>
+      <input
+        onChange={(e) => setInput(e.target.value)}
+        className="userInput"
+        type="text"
+        placeholder="   Add item..."
+      />
+      <button>add +</button>
     </form>
   );
 };
