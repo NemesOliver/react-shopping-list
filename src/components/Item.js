@@ -1,10 +1,12 @@
 // each item
 
-const Item = ({input}) => {
+const Item = ({ id, item, successHandler }) => {
   return (
     <div className="item">
-      <p>{input}</p>
-      <button href="#">X</button>
+      <p>{item}</p>
+      <button onClick={(e) => successHandler()} href="#">
+        X
+      </button>
     </div>
   );
 };

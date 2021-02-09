@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import AddItem from "./components/AddItem";
 import ItemList from "./components/ItemList";
+import { uuid } from "uuidv4";
 
 function App() {
   //state
@@ -14,11 +15,25 @@ function App() {
   const addToStatehandler = (e) => {
     e.preventDefault();
     // push inputs in the array **
-    if (items.length === 0) {
-      setItems([input]);
-    } else {
-      setItems([...items, input]);
+    if (input !== "") {
+      if (items.length === 0) {
+        setItems([
+          {
+            itemValue: input,
+            id: uuid(),
+          },
+        ]);
+      } else {
+        setItems([
+          ...items,
+          {
+            itemValue: input,
+            id: uuid(),
+          },
+        ]);
+      }
     }
+    setInput("");
   };
   return (
     <div className="shopping-container">
@@ -28,9 +43,9 @@ function App() {
         input={input}
         setInput={setInput}
         setItems={setItems}
-        items={items}
+        items={items.itemValue}
       />
-      <ItemList input={input} />
+      <ItemList items={items} input={input} />
     </div>
   );
 }
