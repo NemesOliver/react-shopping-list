@@ -1,14 +1,13 @@
 // each item
 
 const Item = ({ item, setItems, items }) => {
-  //delete handler
-  const deleteHandler = (e) => {
-    setItems(items.filter((el) => el.id !== item.id));
-  };
   return (
     <div className="item">
       <p>{item.itemValue}</p>
-      <button onClick={deleteHandler} href="#">
+      <button
+        onClick={() => setItems(items.filter((el) => el.id !== item.id))} //delete handler
+        href="#"
+      >
         X
       </button>
     </div>
