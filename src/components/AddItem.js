@@ -1,7 +1,7 @@
 //add item component
 
 //uuid
-import { uuid } from "uuidv4";
+import { v4 as uuidv4 } from "uuid";
 
 const AddItem = ({ input, setInput, items, setItems }) => {
   //functions
@@ -13,7 +13,7 @@ const AddItem = ({ input, setInput, items, setItems }) => {
         ...items,
         {
           itemValue: input,
-          id: uuid(),
+          id: uuidv4(),
         },
       ]);
     }
