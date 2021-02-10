@@ -5,6 +5,7 @@ import { uuid } from "uuidv4";
 
 const AddItem = ({ input, setInput, items, setItems }) => {
   //functions
+  //add item to the list and reset input value
   const submitHandler = (e) => {
     e.preventDefault();
     if (input !== "") {
