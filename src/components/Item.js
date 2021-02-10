@@ -1,10 +1,15 @@
 // each item
 
-const Item = ({ id, item, successHandler }) => {
+const Item = ({ item, items, setItems, deleteHandler }) => {
+  //successHandler
+
   return (
     <div className="item">
-      <p>{item}</p>
-      <button onClick={(e) => successHandler()} href="#">
+      <p>{item.itemValue}</p>
+      <button
+        onClick={() => deleteHandler()}
+        href="#"
+      >
         X
       </button>
     </div>

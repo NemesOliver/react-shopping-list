@@ -33,7 +33,6 @@ function App() {
         ]);
       }
     }
-    setInput("");
   };
   return (
     <div className="shopping-container">
@@ -45,7 +44,7 @@ function App() {
         setItems={setItems}
         items={items.itemValue}
       />
-      <ItemList items={items} input={input} />
+      <ItemList items={items} input={input} setItems={setItems} />
     </div>
   );
 }

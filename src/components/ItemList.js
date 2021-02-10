@@ -2,22 +2,24 @@
 
 //imports
 import Item from "./Item";
-// uuid
-import { uuid } from "uuidv4";
 
-const ItemList = ({ items }) => {
-  //success handler
-  const successHandler = () => {
-    console.log();
+const ItemList = ({ items, setItems }) => {
+  //delete handler
+  const deleteHandler = () => {
+    // items.forEach((item) => {
+    // });
+    // delete items
   };
   return (
     <div className="item-list">
       {items.map((item) => (
         <Item
-          id={uuid()}
+          id={item.id}
+          items={items}
+          setItems={setItems}
           key={item.id}
-          item={item.itemValue}
-          successHandler={successHandler}
+          item={item}
+          deleteHandler={deleteHandler}
         />
       ))}
     </div>
