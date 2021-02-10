@@ -58,6 +58,15 @@
 
 .shopping-container .item-list {
   width: 90%;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #323232;
+  border-left: 5px solid #ffffff;
 }
 
 .shopping-container .item-list .item {
